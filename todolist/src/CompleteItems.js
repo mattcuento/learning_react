@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import FlipMove from "react-flip-move";
 
-class TodoItems extends Component {
+class CompleteItems extends Component {
     constructor(props) {
         super(props);
 
@@ -12,13 +12,9 @@ class TodoItems extends Component {
         this.props.delete(key);
     }
 
-    complete(key) {
-        this.props.complete(key);
-    }
-
     createTasks(item) {
-        return <li onClick={() => this.complete(item.key)}
-            key={item.key}>{item.text}<div onClick={() => this.delete(item.key)}><strong>&times;</strong></div></li>
+        return <li onClick={() => this.delete(item.key)}
+            key={item.key}>{item.text}</li>
     }
 
     render() {
@@ -26,7 +22,7 @@ class TodoItems extends Component {
         var listItems = todoEntries.map(this.createTasks);
 
         return(
-            <ul className="theList">
+            <ul className="completeList">
                 <FlipMove duration={250} easing="ease-out">
                     {listItems}
                 </FlipMove>
@@ -35,4 +31,4 @@ class TodoItems extends Component {
     }
 }
 
-export default TodoItems;
+export default CompleteItems;
