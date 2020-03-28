@@ -1,0 +1,15 @@
+.bar {
+  position: relative;
+  height: 20px;
+  width: 100%;
+  border: 1px solid;
+  2vertical-align: middle;
+  align-content: center;
+}
+
+.filler {
+  background: beige;
+  height: 100%;
+  transition: width 0.2s ease-in-out;
+  fill: coral;
+}
