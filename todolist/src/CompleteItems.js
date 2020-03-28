@@ -14,7 +14,7 @@ class CompleteItems extends Component {
 
     createTasks(item) {
         return <li onClick={() => this.delete(item.key)}
-            key={item.key}>{item.text}</li>
+            key={item.key}>{item.text}<div><strong>&times;</strong></div></li>
     }
 
     render() {

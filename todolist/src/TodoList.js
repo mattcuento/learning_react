@@ -91,10 +91,16 @@ class TodoList extends Component {
                          <button type="submit">add</button>
                      </form>
                  </div>
-                 <TodoItems delete={this.deleteItem} complete={this.completeItem}
-                    entries={this.state.items}/>
-                 <CompleteItems delete={this.deleteComplete}
-                    entries={this.state.completeItems}/>
+                <h1>To-Do:</h1>
+                <div className="bgList">
+                    <TodoItems /*delete={this.deleteItem}*/ complete={this.completeItem}
+                        entries={this.state.items}/>
+                </div>
+                <h1>Complete:</h1>
+                <div className="bgList">
+                    <CompleteItems delete={this.deleteComplete}
+                     entries={this.state.completeItems}/>
+                </div>
              </div>
         );
     }
