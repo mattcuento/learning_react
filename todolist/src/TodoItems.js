@@ -8,9 +8,9 @@ class TodoItems extends Component {
         this.createTasks = this.createTasks.bind(this);
     }
 
-    delete(key) {
+    /*delete(key) {
         this.props.delete(key);
-    }
+    }*/
 
     complete(key) {
         this.props.complete(key);
@@ -18,7 +18,7 @@ class TodoItems extends Component {
 
     createTasks(item) {
         return <li onClick={() => this.complete(item.key)}
-            key={item.key}>{item.text}<div onClick={() => this.delete(item.key)}><strong>&times;</strong></div></li>
+            key={item.key}>{item.text}</li>
     }
 
     render() {
